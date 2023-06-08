@@ -1,0 +1,113 @@
+<div class="container">
+    <div class="p-4 mb-4 bg-light" style="width: 100%">
+        <div class="container-fluid py-1">
+            <div>
+                <br>
+                <h1 style="text-align: center;">Registro de Administrador</h1>
+                <hr>
+                <div class="row align-items-md-stretch">
+
+                    <div class="col-md-12" style="width: 100%">
+                        <form [formGroup]="form">
+
+                            <div class="form-group">
+                                <label style="float: left">Nombre</label>
+                                <input class="form-control" formControlName="name" type="name"
+                                    placeholder="Ingrese nombre" [(ngModel)]="admin.name" required>
+                                <div class="errorMessage"
+                                    *ngIf="getValue('name')?.invalid && (getValue('name').touched || getValue('name').dirty)">
+                                    Ingrese nombre</div>
+                            </div>
+
+                            <br>
+
+                            <div class="form-group">
+                                <label style="float: left">Apellido</label>
+                                <input class="form-control" formControlName="lastName" type="apellido"
+                                    placeholder="Ingrese apellido" [(ngModel)]="admin.lastName" required>
+                                <div class="errorMessage"
+                                    *ngIf="getValue('lastName')?.invalid && (getValue('lastName').touched || getValue('lastName').dirty)">
+                                    Ingrese apellido</div>
+                            </div>
+
+                            <br>
+
+                            <div class="form-group">
+                                <label style="float: left">DNI</label>
+                                <input class="form-control" formControlName="dni" type="dni"
+                                    placeholder="Ingrese DNI" [(ngModel)]="admin.dni" required>
+                                <div class="errorMessage"
+                                    *ngIf="getValue('dni')?.invalid && (getValue('dni').touched || getValue('dni').dirty)">
+                                    Ingrese DNI</div>
+                            </div>
+
+                            <br>
+
+                            <div class="form-group">
+                                <label style="float: left">Edad</label>
+                                <input class="form-control" formControlName="age" type="age"
+                                    placeholder="Ingrese edad" [(ngModel)]="admin.age" required>
+                                <div class="errorMessage"
+                                    *ngIf="getValue('age')?.invalid && (getValue('age').touched || getValue('age').dirty)">
+                                    Ingrese edad</div>
+                            </div>                         
+
+                            <br>
+
+                            <div class="form-group">
+                                <label style="float: left">Email</label>
+                                <input class="form-control" formControlName="email" type="email"
+                                    placeholder="Ingrese email" [(ngModel)]="admin.email" required>
+                                <div class="errorMessage"
+                                    *ngIf="getValue('email')?.invalid && (getValue('email').touched || getValue('email').dirty)">
+                                    Ingrese mail</div>
+                            </div>
+
+                            <br>
+
+                            <div class="form-group">
+                                <label style="float: left">Contraseña</label>
+                                <input autocomplete="new-password" #password class="form-control"
+                                    formControlName="password" type="password" placeholder="Ingrese contraseña"
+                                    [(ngModel)]="admin.password" required>
+                                <div class="errorMessage"
+                                    *ngIf="getValue('password')?.invalid && (getValue('password').touched || getValue('password').dirty)">
+                                    Mínimo 6 caracteres</div>
+                            </div>
+
+                            <br>
+                            
+                            <div class="form-group">
+                                <label style="float: left">Repita la contraseña</label>
+                                <input autocomplete="new-password" #password class="form-control"
+                                    formControlName="rePassword" type="password"
+                                    placeholder="Ingrese contraseña" [(ngModel)]="rePassword" required>
+                                <div class="errorMessage"
+                                    *ngIf="getValue('rePassword')?.invalid && (getValue('rePassword').touched || getValue('rePassword').dirty)">
+                                    Mínimo 6 caracteres</div>
+                            </div>
+                            
+                            <br>
+
+                            <div class="container-input-file">
+                                <div>
+                                    <input class="form-control" formControlName="file" type="file" multiple
+                                        (change)="uploadImage($event)" placeholder="Ingrese su imagen">
+                                </div>
+                            </div>
+
+                            <br>
+
+                            <div class="d-flex justify-content-center">
+                                <button class="btn btn-primary form-control" (click)="registerAdmin()"
+                                    [disabled]="!form.valid">Registrar</button>
+                                <button class="btn btn-outline-primary form-control" routerLink="/register">Volver</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

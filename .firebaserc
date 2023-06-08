@@ -1,0 +1,16 @@
+{
+  "projects": {
+    "default": "tp-finallaboiv",
+    "tp-finallaboiv": "tp-finallaboiv"
+  },
+  "targets": {
+    "sala-de-juegoslj": {
+      "hosting": {
+        "TP-SalaDeJuegos": [
+          "sala-de-juegoslj"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

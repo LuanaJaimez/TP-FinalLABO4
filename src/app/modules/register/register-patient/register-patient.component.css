@@ -1,0 +1,12 @@
+button {
+    margin: 5px;
+}
+
+.errorMessage {
+    color: rgb(168, 0, 0);
+}
+
+h1, label {
+    color: #1865c1;
+}
+
