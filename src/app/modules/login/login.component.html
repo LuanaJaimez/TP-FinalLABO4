@@ -31,17 +31,56 @@
 
             <br>
 
-            <button class="btn btn-primary form-control" [disabled]="!form.valid">Ingresar</button>
-
-            <hr>
-
-            <button class="btn btn-primary form-control" (click)="fillFormPatient()">Paciente acceso rapido</button>
-
-            <br><br>
-
-            <button class="btn btn-primary form-control" (click)="fillFormDoctor()">Doctor acceso rapido</button>
+            <button class="btn btn-primary form-control" type="submit" [disabled]="!form.valid">Ingresar</button>
       </form>
       <br>
     </div>
+  </div>
+
+  <div class="mdc-touch-target-wrapper">
+    <button class="mdc-fab mdc-fab--touch md-fab-bottom-right">
+      <div class="mdc-fab__ripple"></div>
+      <img class="mdc-fab__icon material-icons" src="/assets/logos/paciente1.png" (click)="fillFormPatient()">
+    </button>
+    <br>
+    <button class="mdc-fab mdc-fab--touch md-fab-bottom-right">
+      <div class="mdc-fab__ripple"></div>
+      <img class="mdc-fab__icon material-icons" src="/assets/logos/paciente2.png" (click)="fillFormPatient()">
+    </button>
+    <br>
+    <button class="mdc-fab mdc-fab--touch md-fab-bottom-right">
+      <div class="mdc-fab__ripple"></div>
+      <img class="mdc-fab__icon material-icons" src="/assets/logos/paciente3.png" (click)="fillFormPatient()">
+    </button>
+    <br>
+    <button class="mdc-fab mdc-fab--touch md-fab-bottom-right">
+      <div class="mdc-fab__ripple"></div>
+      <img class="mdc-fab__icon material-icons" src="/assets/logos/paciente4.png" (click)="fillFormPatient()">
+    </button>
+    <br>
+    <button class="mdc-fab mdc-fab--touch md-fab-bottom-right">
+      <div class="mdc-fab__ripple"></div>
+      <img class="mdc-fab__icon material-icons" src="/assets/logos/paciente5.png" (click)="fillFormPatient()">
+    </button>
+    <br>
+    <button class="mdc-fab mdc-fab--touch md-fab-bottom-right">
+      <div class="mdc-fab__ripple"></div>
+      <img class="mdc-fab__icon material-icons" src="/assets/logos/paciente6.png" (click)="fillFormPatient()">
+    </button>
+    <br>
+    <button class="mdc-fab mdc-fab--touch md-fab-bottom-right">
+      <div class="mdc-fab__ripple"></div>
+      <img class="mdc-fab__icon material-icons" src="/assets/logos/doctor1.png" (click)="fillFormDoctor()">
+    </button>
+    <br>
+    <button class="mdc-fab mdc-fab--touch md-fab-bottom-right">
+      <div class="mdc-fab__ripple"></div>
+      <img class="mdc-fab__icon material-icons" src="/assets/logos/doctor2.png" (click)="fillFormPatient()">
+    </button>
+    <br>
+    <button class="mdc-fab mdc-fab--touch md-fab-bottom-right">
+      <div class="mdc-fab__ripple"></div>
+      <img class="mdc-fab__icon material-icons" src="/assets/logos/admin1.png" (click)="fillFormPatient()">
+    </button>
   </div>
 </div>
